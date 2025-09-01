@@ -1,5 +1,5 @@
 # Ex.No: 01A PLOT A TIME SERIES DATA
-###  Date: 
+###  Date: 01-09-2025
 
 # AIM:
 To Develop a python program to Plot a time series data (population/ market price of a commodity
@@ -12,6 +12,32 @@ To Develop a python program to Plot a time series data (population/ market price
 5. Display the graph.
 # PROGRAM:
 
+```
+import numpy as np
+import pandas as pd
+import seaborn as sns
+import matplotlib.pyplot as plt
+import warnings
+
+
+warnings.filterwarnings("ignore")
+
+
+df = pd.read_csv(r"C:\Users\admin\time series\ford.csv")
+
+
+print(df.head())
+
+
+plt.figure(figsize=(10, 6))
+sns.scatterplot(data=df, x='year', y='price', color='darkorange', alpha=0.7)
+plt.title('Relationship Between Year and Price')
+plt.xlabel('Year')
+plt.ylabel('Price')
+plt.tight_layout()
+plt.show()
+```
+
 
 
 
@@ -23,6 +49,9 @@ To Develop a python program to Plot a time series data (population/ market price
 
 
 # OUTPUT:
+
+<img width="1247" height="757" alt="image" src="https://github.com/user-attachments/assets/6b9605f3-6ba7-4981-b61b-521e64126c8d" />
+
 
 
 
